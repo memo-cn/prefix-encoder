@@ -1,0 +1,74 @@
+{
+    "name": "prefix-encoder",
+    "private": false,
+    "version": "1.0.0",
+    "description": "The Prefix Encoder is a scheme used for encoding and decoding strings and other types of values. By adding a type prefix to the serialized result, it distinguishes the original value type before serialization. 前缀编码器是一种用于编码和解码字符串及其他类型值的方案。通过给序列化结果添加类型前缀，区分序列化前的原始值类型。",
+    "keywords": [
+        "prefix",
+        "encode",
+        "string",
+        "serialization"
+    ],
+    "homepage": "https://github.com/memo-cn/prefix-encoder/tree/main#readme",
+    "type": "module",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "require": "./dist/index.cjs",
+            "import": "./dist/index.mjs"
+        }
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "rimraf ./dist/* && rollup -c --configPlugin rollup-plugin-typescript2",
+        "format": "prettier --write ."
+    },
+    "devDependencies": {
+        "@babel/core": "^7.26.10",
+        "@babel/preset-env": "^7.26.9",
+        "@rollup/plugin-babel": "^6.0.4",
+        "@rollup/plugin-commonjs": "^28.0.3",
+        "@rollup/plugin-json": "^6.1.0",
+        "@rollup/plugin-node-resolve": "^16.0.1",
+        "@rollup/plugin-replace": "^6.0.2",
+        "@rollup/plugin-terser": "^0.4.4",
+        "@types/node": "^22.13.10",
+        "prettier": "^3.5.3",
+        "rimraf": "^6.0.1",
+        "rollup": "^4.35.0",
+        "rollup-plugin-dts": "^6.1.1",
+        "rollup-plugin-typescript2": "^0.36.0",
+        "tslib": "^2.8.1",
+        "typescript": "^5.8.2",
+        "vite": "^6.2.2",
+        "vite-plugin-dts": "^4.5.3"
+    },
+    "files": [
+        "dist",
+        "CHANGELOG.md",
+        "LICENSE",
+        "package.json",
+        "README.md",
+        "README.zh-CN.md"
+    ],
+    "author": {
+        "name": "memo",
+        "email": "i@memo.cool"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:memo-cn/prefix-encoder.git"
+    },
+    "bugs": {
+        "email": "i@memo.cool",
+        "url": "https://github.com/memo-cn/prefix-encoder/issues"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org"
+    },
+    "license": "MIT"
+}
