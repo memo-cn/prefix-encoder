@@ -1,10 +1,10 @@
-# prefix-encoder<a href="https://github.com/memo-cn/prefix-encoder/blob/main/README.zh-CN.md"><img src="https://img.shields.io/npm/v/prefix-encoder.svg" /></a> <a href="https://github.com/memo-cn/prefix-encoder/blob/main/README.zh-CN.md"><img src="https://packagephobia.now.sh/badge?p=prefix-encoder" /></a>
+# prefix-encoder <a href="https://github.com/memo-cn/prefix-encoder/blob/main/README.zh-CN.md"><img src="https://img.shields.io/npm/v/prefix-encoder.svg" /></a> <a href="https://github.com/memo-cn/prefix-encoder/blob/main/README.zh-CN.md"><img src="https://packagephobia.now.sh/badge?p=prefix-encoder" /></a>
 
 [English](https://github.com/memo-cn/prefix-encoder/blob/main/README.md) | [简体中文](https://github.com/memo-cn/prefix-encoder/blob/main/README.zh-CN.md)
 
 ## 介绍
 
-前缀编码器（Prefix Encoder）是一种用于编码和解码字符串及其他类型值的方案。通过给序列化结果添加类型前缀，区分序列化前的原始值类型。
+前缀编码器（Prefix Encoder）支持将原始字符串及另一种类型值（记为类型 T）编码为字符串。通过给序列化结果添加类型前缀，区分序列化前的原始值类型。
 
 - 类型 T 序列化为字符串的算法、类型前缀及转义字符均由你设定。
 - 常规字符串的序列化结果为其自身；如有必要，前缀编码器会添加转义字符以避免冲突。
@@ -30,7 +30,7 @@
 
 | 方法     | 类型                         | 作用                                    |
 | -------- | ---------------------------- | --------------------------------------- |
-| `encode` | (arg: T \| string) => string | 将字符串或其他 T 类型值编码为字符串。   |
+| `encode` | (arg: T \| string) => string | 将字符串或 T 类型值编码为字符串。       |
 | `decode` | (str: string) => T \| string | 将字符串解码回原来的字符串或 T 类型值。 |
 
 ## 示例

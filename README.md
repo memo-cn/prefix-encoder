@@ -1,10 +1,10 @@
-# prefix-encoder<a href="https://github.com/memo-cn/prefix-encoder/blob/main/README.md"><img src="https://img.shields.io/npm/v/prefix-encoder.svg" /></a> <a href="https://github.com/memo-cn/prefix-encoder/blob/main/README.md"><img src="https://packagephobia.now.sh/badge?p=prefix-encoder" /></a>
+# prefix-encoder <a href="https://github.com/memo-cn/prefix-encoder/blob/main/README.md"><img src="https://img.shields.io/npm/v/prefix-encoder.svg" /></a> <a href="https://github.com/memo-cn/prefix-encoder/blob/main/README.md"><img src="https://packagephobia.now.sh/badge?p=prefix-encoder" /></a>
 
 [English](https://github.com/memo-cn/prefix-encoder/blob/main/README.md) | [简体中文](https://github.com/memo-cn/prefix-encoder/blob/main/README.zh-CN.md)
 
 ## Introduction
 
-The Prefix Encoder is a scheme used for encoding and decoding strings and other types of values. By adding a type prefix to the serialized result, it distinguishes the original value type before serialization.
+The Prefix Encoder supports encoding an original string and another type of value (denoted as type T) into a string. By adding a type prefix to the serialized result, it distinguishes the original value type before serialization.
 
 - The algorithm for serializing type T to a string, as well as the type prefix and escape characters, are all set by you.
 - The serialization result of a regular string is the string itself; if necessary, the Prefix Encoder will add escape characters to avoid conflicts.
@@ -30,7 +30,7 @@ Provides the following methods:
 
 | Method   | Type                         | Function                                                             |
 | -------- | ---------------------------- | -------------------------------------------------------------------- |
-| `encode` | (arg: T \| string) => string | Encodes a string or a value of other type T into a string.           |
+| `encode` | (arg: T \| string) => string | Encodes a string or a value of type T into a string.                 |
 | `decode` | (str: string) => T \| string | Decodes a string back into the original string or a value of type T. |
 
 ## Examples
